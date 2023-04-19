@@ -3,6 +3,7 @@
 Membuat API dengan Multi-Lever users : Admin & User
 
 - Diagram Alur
+
   ![image](/images/diagramalur.PNG)
 
 ### Dokumentasi API
@@ -23,3 +24,7 @@ Berikut merupakan dokumentasi API yang telah dibuat:
   | POST | /products | Create new product |
   | PUT | /products/:productId | Update product by id |
   | DELETE | /products/:productId | Delete product by id |
+
+### Running Apps
+- jalankan file yang bernama `main.go`
+- import file yang bernama `JWT-MultiUset.postman_collection.json` pada postman
