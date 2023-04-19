@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "d3d5132f-0ccb-488f-89e2-8ad00b0f3c89",
+		"name": "JWT-MultiUset",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26457520"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\" : \"anugrah\",\r\n    \"role\" : \"admin\",\r\n    \"email\" : \"anugrah@mail.com\",\r\n    \"pass\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/users/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"anugrah@mail.com\",\r\n    \"pass\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudWdyYWhAbWFpbC5jb20iLCJpZCI6MSwicm9sZSI6ImFkbWluIn0.McFyTZ1udoCu3D4dHz0tpVlT9dh1VYbkjSbyi9Hod9o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_product\" : \"Sikat Jembatan\",\r\n    \"description\" : \"mebersihkan jembatan hingga ke akar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/products/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudWdyYWhAbWFpbC5jb20iLCJpZCI6MSwicm9sZSI6ImFkbWluIn0.McFyTZ1udoCu3D4dHz0tpVlT9dh1VYbkjSbyi9Hod9o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_product\" : \"Sikat Jembatan\",\r\n    \"description\" : \"mebersihkan jembatan hingga ke akar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/products/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudWdyYWhAbWFpbC5jb20iLCJpZCI6MSwicm9sZSI6ImFkbWluIn0.McFyTZ1udoCu3D4dHz0tpVlT9dh1VYbkjSbyi9Hod9o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_product\" : \"Sikat Jembatan\",\r\n    \"description\" : \"mebersihkan jembatan hingga ke akar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/products/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleted",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudWdyYWhAbWFpbC5jb20iLCJpZCI6MSwicm9sZSI6ImFkbWluIn0.McFyTZ1udoCu3D4dHz0tpVlT9dh1VYbkjSbyi9Hod9o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_product\" : \"Sikat Jembatan\",\r\n    \"description\" : \"mebersihkan jembatan hingga ke akar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/products/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudWdyYWhAbWFpbC5jb20iLCJpZCI6MSwicm9sZSI6ImFkbWluIn0.McFyTZ1udoCu3D4dHz0tpVlT9dh1VYbkjSbyi9Hod9o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_product\" : \"Sikat Jembatan update akhir\",\r\n    \"description\" : \"mebersihkan jembatan hingga ke akar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/products/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
